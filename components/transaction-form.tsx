@@ -103,7 +103,7 @@ export function TransactionForm({ initialTransaction, onSave, onCancelEdit, isSa
       } else {
         toast( "Error: result.message,: destructive",);
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Transaction form submission error:", error);
       toast("Error", {
         description: error instanceof Error ? error.message : "Failed to save transaction",})

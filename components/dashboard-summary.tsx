@@ -56,7 +56,7 @@ export function DashboardSummary({
       } else {
         toast( "Error : result.message:destructive",)
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Delete transaction error:", error)
       toast(
         `Error: ${error instanceof Error ? error.message : `Failed to delete transaction: ${JSON.stringify(error)}`}`
